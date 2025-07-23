@@ -1,6 +1,6 @@
-HP_mob = 50
 
 while True:
+    HP_mob = 50
     choice = int(input("What do you want to do? (1:FIGHT or 2:RUN)\n"))
 
     if choice == 1:
@@ -19,10 +19,10 @@ while True:
                 print("You choose to stare at it...\n")
                 weapon_dmg = 1
             HP_mob = HP_mob - weapon_dmg
-            turnsleft = turn - 1
+            turn = turn - 1
             
             print(HP_mob, "HP left!")
-            if turnsleft == 0:
+            if turn == 0:
                   if HP_mob == 0:
                     print("YOU WIN!\n") 
                     break
@@ -30,7 +30,7 @@ while True:
                     print("No turns left.....")
                     print("Krajok wa YOU LOSE!\n")
                     break
-            elif turnsleft > 0:
+            elif turn > 0:
                   if HP_mob == 0:
                     print("YOU WIN!\n")
                     break
@@ -38,7 +38,7 @@ while True:
                        HP_mob = HP_mob + 20
                        print("Boss resurrected!!")
 
-            print("You still have", turnsleft, "turns left\n")
+            print("You still have", turn, "turns left\n")
 
     if choice == 2:
         print("L")
